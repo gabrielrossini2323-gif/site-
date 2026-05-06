@@ -1,11 +1,56 @@
+/* Configuração do fundo da página */
 body {
-    background-color: rgb(8, 8, 8);
+    background-color: #000000; /* Fundo preto total */
+    color: white;              /* Cor do texto em branco */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-h1 {
-    color: beige;
+/* Configuração do vídeo com efeito Xenon */
+iframe {
+    border: 2px solid #0a595e; 
+    border-radius: 8px;
+    background-color: #000;
+    box-shadow: 
+        0 0 5px #fff,               
+        0 0 15px #0b565a,            
+        0 0 30px #085458,            
+        0 0 60px rgba(14, 90, 94, 0.5);
+    animation: pulsarXenon 4s infinite alternate ease-in-out;
 }
 
-p {
-    color: antiquewhite;
+/* O "motor" da animação - faz o brilho pulsar */
+@keyframes pulsarXenon {
+    from {
+        box-shadow: 
+            0 0 5px #fff,
+            0 0 15px #0b565a,
+            0 0 30px #085458,
+            0 0 60px rgba(14, 90, 94, 0.5);
+    }
+    to {
+        box-shadow: 
+            0 0 10px #fff,
+            0 0 25px #0a595e,
+            0 0 50px #0a595e,
+            0 0 100px rgba(10, 89, 94, 0.8);
+    }
 }
+
+/* Configuração do Texto (Parágrafo) */
+p { 
+    font-size: 35px;           /* Aumentei para 35px para ficar bem visível */
+    text-shadow: 0 0 15px #0a595e; /* Corrigido: o # vem antes do código */
+    margin-top: 40px;          /* Aumente esse número para o texto descer mais */
+    margin-bottom: 20px;       /* Espaço na parte de baixo caso tenha algo depois */
+    font-weight: bold;         /* Deixa a letra mais grossa */
+    text-align: center;
+}
+
+.button 
+{color:green}
